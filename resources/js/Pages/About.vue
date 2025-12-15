@@ -6,8 +6,7 @@
 </script>
 
 <template>
-     <Head>
-        <title> - About</title>
+    <Head :title="`${$page.component}`">
         <meta head-key="description" name="description" content="This is the about page meta"/>
     </Head>
     <div>

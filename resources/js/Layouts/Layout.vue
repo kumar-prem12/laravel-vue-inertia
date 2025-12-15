@@ -8,11 +8,15 @@
     <meta head-key="description" name="description" content="This is the default description">
   </Head>
   <div>
-    <header class="bg-indigo-500 text-white">
-      <nav class="flex items-center justify-between p-4 max-w-5xl mx-auto">
+    <header>
+      <nav>
+        <!-- <h1>{{ $page.props.auth.user }}</h1> -->
         <div class="space-x-6">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <Link :href="route('home')" class="nav-link">Home</Link>
+          <Link :href="route('about')" class="nav-link">About</Link>
+        </div>
+        <div class="space-x-6">
+          <Link :href="route('register')" class="nav-link">Register</Link>
         </div>
       </nav>
     </header>
