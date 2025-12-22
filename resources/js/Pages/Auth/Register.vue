@@ -73,7 +73,7 @@
             </div> -->
             <div>
                 <p class="text-slate-600 mb-2">Already a user? <a :href="route('login')" class="text-link">Login</a></p>
-                <button class="primary-btn cursor-pointer" :disabled="processing">Register</button>
+                <button class="primary-btn cursor-pointer" :disabled="form.processing">Register</button>
             </div>
         </form>
     </div>
