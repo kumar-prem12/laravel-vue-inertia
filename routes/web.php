@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -33,6 +34,7 @@ Route::inertia('/about', 'About', ['user' => 'Prem'])->name('about');
 Route::middleware('auth')->group( function() {
     Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::resource('posts', PostController::class);
 });
 
 Route::middleware('guest')->group( function () {

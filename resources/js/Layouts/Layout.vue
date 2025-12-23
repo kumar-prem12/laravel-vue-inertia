@@ -17,8 +17,10 @@
           <Link :href="route('about')" class="nav-link":class="{'bg-slate-700' : $page.component === 'About'}">About</Link>
         </div>
         <div v-if="$page.props.auth.user" class="space-x-6 flex">
-          <img class="avatar" :src="$page.props.auth.user.avatar ? ('storage/' + $page.props.auth.user.avatar) : ('storage/avatars/user-default.png')" alt="">
+          <img class="avatar" :src="$page.props.auth.user.avatar ? `/storage/${$page.props.auth.user.avatar}` : '/storage/avatars/user-default.png'"alt="">
+          <!-- <img class="avatar" :src="$page.props.auth.user.avatar ? ('storage/' + $page.props.auth.user.avatar) : ('storage/avatars/user-default.png')" alt=""> -->
           <Link :href="route('dashboard')" class="nav-link" :class="{'bg-slate-700' : $page.component === 'Dashboard'}">Dashboard</Link>
+          <Link :href="route('posts.index')" class="nav-link" :class="{'bg-slate-700' : $page.component === 'Posts/Index'}">Posts</Link>
           <Link :href="route('logout')"  method="post" as="button" class="nav-link">Logout</Link>
         </div>
         <div v-else class="space-x-6">
