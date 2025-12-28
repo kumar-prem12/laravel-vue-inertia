@@ -47,7 +47,7 @@ const destroy = (id) => {
           <tr v-for="post in posts.data" :key="post.id">
               <td>{{post.title}}</td>
               <td>{{post.body}}</td>
-              <td>
+              <td class="flex">
                 <Link :href="route('posts.edit', post.id)">Edit</Link>
                 <button @click="destroy(post.id)" class="text-red-500 ml-2">Delete
                 </button>
