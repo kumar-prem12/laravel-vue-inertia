@@ -1,8 +1,10 @@
 import './bootstrap';
 import { createApp, h } from 'vue'
-import { createInertiaApp , Head, Link} from '@inertiajs/vue3'
+import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 import Layout from './Layouts/Layout.vue';
+import ToastPlugin from '@erag/vue-toastification';
+import '@erag/vue-toastification/dist/style.css';
 
 createInertiaApp({
     title: (title) => `My App ${title}`,
@@ -16,6 +18,7 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(ToastPlugin)
             .component("Head", Head)
             .component("Link", Link)
             .mount(el)
