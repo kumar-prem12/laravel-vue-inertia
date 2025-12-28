@@ -9,7 +9,7 @@ watch(
   () => page.props.flash.toast,
   newFlash => {
     if (newFlash?.type) {
-      toast[newFlash?.type](newFlash?.message, '');
+      toast[newFlash?.type](newFlash?.message, '', 4000 , 'bottom-right');
     }
   },
   { deep: true }

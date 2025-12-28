@@ -15,7 +15,7 @@
         "vite": "^7.0.7"
     },
     "dependencies": {
-        "@erag/vue-toastification": "^1.1.0",
+        "@erag/vue-toastification": "^1.1.1",
         "@inertiajs/vue3": "^2.2.18",
         "@vitejs/plugin-vue": "^6.0.2",
         "lodash": "^4.17.21",
